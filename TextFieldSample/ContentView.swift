@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var name: String = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            
+            TextField("암거나 여기에 넣어줘바", text: $name)
+                .border(Color.black)
+            
+            Text("너가 입력한 값 : ")
+            Text("\(name)")
+        }
+        .padding()
+        .font(.title)
+        
     }
 }
 
